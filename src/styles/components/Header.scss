@@ -1,0 +1,82 @@
+.header{
+    width: 100%;
+    border-bottom: 1px solid #D0D0D0;
+    
+    .header-menu{
+        max-width: 1064px;
+        height: 145px;
+        margin: 0 auto;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        .header-menu-top{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 10px;
+            h1{
+                margin: 0;
+                color: #00008B;
+                font-size: 64px;
+                font-weight: 900;
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            form{
+                // width: 790px;
+                width: 80%;
+                height: 53px;
+                border-radius: 15px;
+                border: 5px solid #00008B;
+                padding-left: 10px;
+                display: flex;
+                justify-content: space-between;
+
+                input{
+                    width: 80%;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    color: #00008B;
+                    font-size: 16px;
+                    font-weight: 700;
+
+                    &::placeholder{
+                    color: #00008B;
+                    font-weight: 700;
+                    font-size: 16px;
+                    }
+                }
+
+                button{
+                    border: none;
+                    background: none;
+                    outline: none;
+                }
+            }
+        }
+
+        .header-menu-bottom{
+            display: flex;
+            justify-content: space-between;
+
+            ul{
+                display: flex;
+                gap: 15px;
+                padding-left: 0;
+
+                li{
+                    list-style: none;
+                    font-size: 20px;
+                    font-weight: 700;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

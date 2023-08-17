@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import MainApp from "./pages/MainPage/MainApp";
+import SearchApp from "./pages/SearchPage/SearchApp";
+import LoginModal from "./pages/LoginPage/LoginModal";
+import SignUpModal from "./pages/LoginPage/SignUpModal";
+import QaPage from "./pages/QaPage/QaPage";
+import QaDetail from "./pages/QaPage/QaDetail";
+import MyPageApp from "./pages/MyPage/MyPageApp";
+import EducationContentPage from "./pages/EduContentPage/EduContentPage";
+import ContentApp from "./pages/ContentPage/ContentApp";
+import { RecoilRoot } from "recoil";
+import styled from "styled-components";
+
+const Container = styled.div`
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          안녕하세요! 테스트용 리액트 입니다!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <Container>
+        <Header />
+        <LoginModal />
+        <SignUpModal />
+        <Routes>
+          <Route path="/" element={<MainApp />} />
+          <Route path="/search" element={<SearchApp />} />
+          <Route path="/QaPage" element={<QaPage />} />
+          <Route path="/QaPage/:inquiryId" element={<QaDetail />} />
+          <Route path="/mypage/*" element={<MyPageApp />} />
+          <Route
+            path="/education-content-page/:contentId"
+            element={<EducationContentPage />}
+          />
+          <Route path="/create-content" element={<ContentApp />} />
+        </Routes>
+        <Footer />
+      </Container>
+    </RecoilRoot>
   );
 }
 

@@ -1,0 +1,63 @@
+.main-edu-container {
+  margin: 100px 0;
+
+  .main-edu-title {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    span {
+      color: #898989;
+      font-size: 11px;
+    }
+  }
+
+  .main-edu-category {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 68px;
+        height: 68px;
+        margin-right: 10px;
+        border-radius: 15px;
+        background: #fbfbfb;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+
+        img {
+          width: 32px;
+          height: 30px;
+        }
+
+        span {
+          color: #898989;
+          font-size: 12px;
+          font-weight: 700;
+        }
+
+        &.active {
+          // svg 파일은 xml 기반 벡터 이미지여서 scss에서 색상 변경 불가
+          // img {
+          //   fill: #699bf7;
+          // }
+          span {
+            color: #699bf7;
+          }
+        }
+      }
+    }
+  }
+}
