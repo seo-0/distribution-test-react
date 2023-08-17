@@ -1,0 +1,61 @@
+.myask-container {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1064px;
+  padding: 20px 10px;
+
+  h1 {
+    font-size: 24px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      background: #e3e3e3;
+      height: 50px;
+
+      th {
+        border-top: none;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #c7c7c7;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #00008b;
+    color: #ffffff;
+    font-weight: 800;
+    padding: 8px 20px;
+    margin-top: 15px;
+    float: right;
+  }
+}

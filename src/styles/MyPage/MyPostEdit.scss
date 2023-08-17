@@ -1,0 +1,40 @@
+.mypost-edit-container {
+  box-sizing: border-box;
+  max-width: 1064px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 10px;
+
+  .title {
+    margin: 0;
+    text-align: center;
+  }
+
+  .button-zip {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    button {
+      outline: none;
+      border: none;
+      width: 282px;
+      height: 58px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      &:nth-child(1) {
+        border: 2px solid #00008b;
+        background: #fff;
+        color: #00008b;
+      }
+      &:nth-child(2) {
+        border: 2px solid #00008b;
+        background: #00008b;
+        color: #ffffff;
+      }
+    }
+  }
+}

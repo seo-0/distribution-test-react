@@ -1,0 +1,61 @@
+.main-ranking-container {
+  div {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    span {
+      color: #898989;
+      font-size: 11px;
+    }
+  }
+
+  p {
+    color: #00008b;
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .ranking-container {
+    width: 100%;
+    border-radius: 5px;
+    background: #f9f9f9;
+    padding: 10px 20px;
+    box-sizing: border-box;
+
+    ul {
+      padding-left: 0;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 40px;
+
+      li {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+          p {
+            color: #000;
+            font-size: 16px;
+
+            &:first-child {
+              font-weight: 700;
+              font-size: 20px;
+              margin-bottom: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
